@@ -28,7 +28,7 @@ min_topic_sizes = [str(x) for x in min_topic_sizes]
 
 st.set_page_config(page_title='Central Lechera', layout='wide')
 
-st.title(f'''CHESS CHAMPIONS''')
+st.title(f'''Central Lechera''')
 
 min_topic_size = st.radio('Mínimo tamaño de Topic', tuple(min_topic_sizes))
 
