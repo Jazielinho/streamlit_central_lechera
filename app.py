@@ -12,7 +12,7 @@ from streamlit_plotly_events import plotly_events
 
 
 # directory = '/media/jahaziel/Datos/proyectos/Smarketing/dataset/f1/2023-05-20'
-# directory = '/media/jahaziel/Datos/proyectos/Smarketing/dataset/world_chess/2023-05-26'
+# directory = '/media/jahaziel/Datos/proyectos/Smarketing/dataset/solo_solito_central_lechera/2023-07-20'
 # directory = '/media/jahaziel/Datos/proyectos/Smarketing/dataset/central_lechera/2023-06-01'
 
 # directorio actual automático
@@ -148,7 +148,7 @@ with tab2:
         df["y"] = text_info_df['y'].to_list()
         # df = df.sample(frac=0.3).reset_index(drop=True)
         distances = hierarchical_topics_df.Distance.to_list()
-        max_distances = [distances[indices[-1]] for indices in np.array_split(range(len(hierarchical_topics_df)), 20)][::-1]
+        max_distances = [distances[indices[-1]] for indices in np.array_split(range(len(hierarchical_topics_df)), 5)][::-1]
         for index, max_distance in enumerate(max_distances):
             mapping = {topic: topic for topic in df.topic.unique()}
             selection = hierarchical_topics_df.loc[hierarchical_topics_df.Distance <= max_distance, :]
